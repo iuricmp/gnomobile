@@ -1,16 +1,16 @@
 import { GoBridgeInterface } from './GoBridgeInterface'
 
 class NoopGoBridge implements GoBridgeInterface {
-	initBridge() {
-		return Promise.reject()
-	}
+  initBridge() {
+    return Promise.reject()
+  }
 
-	closeBridge() {
-		return Promise.reject()
-	}
+  closeBridge() {
+    return Promise.reject()
+  }
 
   hello(_: string) {
-		return Promise.reject()
+    return Promise.reject()
   }
 }
 
