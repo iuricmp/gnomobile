@@ -41,6 +41,10 @@ service GnomobileService {
   // length of the result.)
   rpc GetActiveAccount(GetActiveAccountRequest) returns (GetActiveAccountResponse);
 
+  // DeleteAccount deletes the account with the given name, using the password to
+  // ensure access. If the account doesn't exist, then return ErrCryptoKeyNotFound.
+  rpc DeleteAccount(DeleteAccountRequest) returns (DeleteAccountResponse);
+
   // Make an ABCI query to the remote node.
   rpc Query(QueryRequest) returns (QueryResponse);
 
