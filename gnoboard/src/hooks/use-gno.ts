@@ -31,6 +31,7 @@ interface GnoResponse {
   createAccount: (nameOrBech32: string, mnemonic: string, password: string) => Promise<GnoAccount | undefined>;
   generateRecoveryPhrase: () => Promise<string>;
   listKeyInfo: () => Promise<GnoAccount[]>;
+  isAccountNameExists: (name: string) => Promise<boolean>;
   getKeyInfoByName: (name: string) => Promise<GnoAccount | undefined>;
   getKeyInfoByAddress: (bech32Address: string) => Promise<GnoAccount | undefined>;
   getKeyInfoByNameOrAddress: (nameOrBech32: string) => Promise<GnoAccount | undefined>;
