@@ -8,7 +8,7 @@ TEMPDIR := $(shell dirname $(shell mktemp -u))
 # Define the directory that contains the current Makefile
 make_dir := $(realpath $(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 cache_dir := $(make_dir)/.cache
-react_native_dir := $(make_dir)/gnoboard
+react_native_dir := $(make_dir)/examples/hello
 
 # Argument Defaults
 IOS_OUTPUT_FRAMEWORK_DIR ?= $(react_native_dir)/ios/Frameworks
