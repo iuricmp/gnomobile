@@ -1,4 +1,6 @@
+import { useGno } from "@gno/hooks/use-gno";
 import CustomRouter from "@gno/router/custom-router";
+import React from "react";
 import "react-native-polyfill-globals/auto";
 
 // Polyfill async.Iterator. For some reason, the Babel presets and plugins are not doing the trick.
@@ -7,6 +9,15 @@ import "react-native-polyfill-globals/auto";
   Symbol.for("Symbol.asyncIterator");
 
 function App() {
+  const gno = useGno();
+
+  React.useEffect(() => {
+    console.log("gno", gno);
+    gno.getRemote()
+    .then(res => console.log(res))
+    .catch(err => console.log(err));
+  }, []);
+
   return <CustomRouter />;
 }
 
