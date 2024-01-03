@@ -16,7 +16,7 @@ To create a new app, run the following command:
 
 ```console
 cd gnonative (root of the repo)
-make create-app APP_NAME=MyApp
+make new-app APP_NAME=MyApp
 ```
 
 This will create a new app in the `examples/MyApp` directory containing a basic
